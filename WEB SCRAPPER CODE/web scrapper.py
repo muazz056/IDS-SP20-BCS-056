@@ -2,14 +2,14 @@ import html
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import json 
-response = requests.get("https://www.dawn.com/")
+import json
+response = requests.get("import sounddevice as sound")
 soup = BeautifulSoup(response.text, 'lxml')
-temp=soup.findAll("h2")
+temp = soup.findAll("h2")
 #soup = BeautifulSoup(response.content, 'html5lib')
-#print(soup.prettify())
+# print(soup.prettify())
 
 # creat list of heading tags
 for tags in temp:
-    headings=tags.text.strip()
+    headings = tags.text.strip()
     print(headings)
